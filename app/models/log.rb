@@ -8,5 +8,9 @@ class Log < ActiveRecord::Base
     log.has_many :custom_locations, source_type: "CustomLocation"
     log.has_many :countries,        source_type: "Country"
   end
+
+  with_options allow_destroy: true do |log|
+    log.accepts_nested_attributes_for :custom_locations
+  end
 end
 
