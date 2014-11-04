@@ -26,6 +26,16 @@ class LogsController < ApplicationController
 
   def edit
   end
+
+  def update
+    if @log.update log_attrs
+      redirect_to log_path(@log)
+
+    else
+      flash[:error] = "Couldn't update the log."
+      render :edit
+    end
+  end
 private
   def log_attrs
     params.require(:log).
