@@ -10,6 +10,7 @@ class Log < ActiveRecord::Base
   end
 
   with_options allow_destroy: true do |log|
+    log.accepts_nested_attributes_for :log_locations
     log.accepts_nested_attributes_for :custom_locations
   end
 end
