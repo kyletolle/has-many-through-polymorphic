@@ -18,4 +18,10 @@ class LogsController < ApplicationController
       render :new
     end
   end
+private
+  def log_attrs
+    params.require(:log).
+      permit(:entry_name,
+            )
+  end
 end
