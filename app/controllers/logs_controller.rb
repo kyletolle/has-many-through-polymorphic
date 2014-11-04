@@ -1,4 +1,6 @@
 class LogsController < ApplicationController
+  before_action :load_log, only: [ :show, :edit, :update, :destroy ]
+
   def index
     @logs = Log.all
   end
@@ -18,10 +20,17 @@ class LogsController < ApplicationController
       render :new
     end
   end
+
+  def show
+  end
 private
   def log_attrs
     params.require(:log).
       permit(:entry_name,
             )
+  end
+
+  def load_log
+    @log = Log.find params[:id]
   end
 end
