@@ -27,6 +27,20 @@
     </div>
   </div>
 
+  <div class="custom-locations">
+    <h3>Custom Locations</h3>
+
+    <%= f.fields_for :custom_locations do |custom_location_fields| %>
+      <% if custom_location_fields.object %>
+        <%= render 'custom_location_fields', f: custom_location_fields %>
+      <% end %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'Add Custom Location', f, :custom_locations %>
+    </div>
+  </div>
+
   <div><%= f.submit %></div>
 <% end %>
 

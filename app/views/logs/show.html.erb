@@ -14,3 +14,10 @@
   <% end %>
 </ul>
 
+<h3>Custom Locations</h3>
+<ul>
+  <% @log.custom_locations.each do |custom_location| %>
+    <li><%= custom_location.name %></li>
+  <% end %>
+</ul>
+

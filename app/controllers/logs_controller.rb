@@ -51,6 +51,8 @@ private
       permit(:entry_name,
              log_locations_attributes:
               [ :id, :location_type, :location_id, :_destroy],
+             custom_locations_attributes:
+              [ :id, :name, :_destroy ]
             )
   end
 
