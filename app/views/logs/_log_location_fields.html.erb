@@ -1,0 +1,7 @@
+<div class="nested-fields">
+  <%= f.hidden_field :location_type, value: 'Country' %>
+  <%- countries = Country.all.map{|c| [c.name, c.id] } %>
+  <%= f.select :location_id, options_for_select(countries, f.object.try(:location).try(:id)) %>
+  <%= link_to_remove_association "Remove Country", f %>
+</div>
+

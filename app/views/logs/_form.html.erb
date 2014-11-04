@@ -12,5 +12,21 @@
     <%= f.label :entry_name %> <%= f.text_field :entry_name %>
   </div>
 
+  <div class="countries">
+    <h3>Countries</h3>
+
+    <%= f.fields_for :log_locations do |log_location_fields| %>
+      <% case log_location_fields.object.location_type %>
+      <% when "Country" %>
+        <%= render 'log_location_fields', f: log_location_fields %>
+      <% end %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'Add Country', f, :log_locations %>
+    </div>
+  </div>
+
   <div><%= f.submit %></div>
 <% end %>
+

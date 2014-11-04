@@ -7,3 +7,10 @@
   </p>
 </div>
 
+<h3>Countries</h3>
+<ul>
+  <% @log.countries.each do |country| %>
+    <li><%= country.name %></li>
+  <% end %>
+</ul>
+
