@@ -3,5 +3,9 @@ class Log < ActiveRecord::Base
 
   has_many :log_locations, table_name: :logs_locations,
       foreign_key: :log_id, dependent: :destroy
+
+  with_options through: :log_locations, source: :location do |log|
+    log.has_many :countries,        source_type: "Country"
+  end
 end
 
