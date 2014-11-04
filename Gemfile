@@ -16,6 +16,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Process management
+gem 'foreman', '~> 0.75.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
