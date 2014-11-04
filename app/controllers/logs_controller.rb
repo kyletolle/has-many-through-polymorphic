@@ -36,6 +36,15 @@ class LogsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    unless @log.destroy
+      flash[:error] = "Couldn't destroy the log."
+    end
+
+    redirect_to logs_path
+  end
+
 private
   def log_attrs
     params.require(:log).
