@@ -4,4 +4,5 @@
   "repository": "https://github.com/kyletolle/has-many-through-polymorphic",
   "keywords": ["rails", "has_many", "through", "association", "polymorphism"],
   "website": "https://has-many-through-polymorphic.herokuapp.com/",
+  "addons": ["heroku-postgresql"]
 }
