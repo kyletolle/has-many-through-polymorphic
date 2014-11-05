@@ -1,0 +1,7 @@
+{
+  "name": "has-many-through-polymorphic",
+  "description": "Exploring has_many :through associations that use
+  polymorphism in Rails 4",
+  "repository": "https://github.com/kyletolle/has-many-through-polymorphic",
+  "keywords": ["rails", "has_many", "through", "association", "polymorphism"]
+}
