@@ -40,3 +40,6 @@ this works in actuality, and then look at the source for how I did it.
 
 4.1.7
 
+## License
+
+MIT
