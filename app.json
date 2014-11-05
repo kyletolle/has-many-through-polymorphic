@@ -6,7 +6,8 @@
   "website": "https://has-many-through-polymorphic.herokuapp.com/",
   "addons": ["heroku-postgresql"],
   "scripts": {
-    "postdeploy": "bundle exec rake db:migrate"
+    "postdeploy": "bundle exec rake db:migrate",
+    "postdeploy": "bundle exec rake data:create_sample_data"
   },
   "success_url": "/"
 }
