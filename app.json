@@ -7,5 +7,6 @@
   "addons": ["heroku-postgresql"],
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate"
-  }
+  },
+  "success_url": "/"
 }
