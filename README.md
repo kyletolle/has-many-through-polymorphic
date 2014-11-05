@@ -1,28 +1,12 @@
-== README
+# has-many-through-polymorphic
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kyletolle/has-many-through-polymorphic/tree/master)
 
-Things you may want to cover:
+## Ruby Version
 
-* Ruby version
+2.1.3
 
-* System dependencies
+## Rails Version
 
-* Configuration
+4.1.7
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
