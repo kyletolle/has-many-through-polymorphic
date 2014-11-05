@@ -8,8 +8,6 @@ class LogLocation < ActiveRecord::Base
   belongs_to :log
   belongs_to :location, polymorphic: true
 
-  accepts_nested_attributes_for :location
-
 private
   def valid_location
     location_is_valid_type =
