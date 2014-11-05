@@ -16,7 +16,7 @@ class LogsController < ApplicationController
       redirect_to logs_path
 
     else
-      flash[:error] = "Couldn't create the log."
+      flash.now[:error] = "Couldn't create the log."
       render :new
     end
   end
@@ -32,14 +32,14 @@ class LogsController < ApplicationController
       redirect_to log_path(@log)
 
     else
-      flash[:error] = "Couldn't update the log."
+      flash.now[:error] = "Couldn't update the log."
       render :edit
     end
   end
 
   def destroy
     unless @log.destroy
-      flash[:error] = "Couldn't destroy the log."
+      flash.now[:error] = "Couldn't destroy the log."
     end
 
     redirect_to logs_path
