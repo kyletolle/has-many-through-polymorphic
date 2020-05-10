@@ -1,0 +1,31 @@
+%h1 New Log - Creating Custom Location and Country at the Same Time
+
+
+- if @log.errors.any?
+  .errors
+    %pThere were problems saving your log...
+    - @log.errors.full_messages.each do |message|
+      %p= message
+
+= form_for @log do |f|
+  .entry-name
+    = f.label :entry_name
+    = f.text_field :entry_name, value: "Test ##{Log.count+1} Creating Custom Location and Country at Same Time"
+
+  .countries
+    %h3 Countries
+
+    %p There are hidden values to create a country when we submit.
+    .log-location
+      %input{type: 'hidden', name: 'log[log_locations_attributes][1][location_type]', value: 'Country'}
+      %input{type: 'hidden', name: 'log[log_locations_attributes][1][location_id]',   value: '4'}
+
+  .custom-locations
+    %h3 Custom Locations
+
+    %p There are hidden values to create a custom location when we submit.
+    .custom-location
+      %input{type: 'hidden', name: 'log[custom_locations_attributes][1][name]', value: Time.now.to_s}
+
+  .submit= f.submit
+

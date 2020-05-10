@@ -10,9 +10,16 @@ class LogsController < ApplicationController
   end
 
   def create
+    puts "###########################"
+    puts "###########################"
+    puts "###########################"
+    puts "CREATING MANG"
+    attrs = log_attrs
+    puts "PERMITTED LOG ATTRIBUTES"
+    puts attrs
     @log = Log.new log_attrs
 
-    if @log.save
+    if false && @log.save
       redirect_to logs_path
 
     else
@@ -28,6 +35,11 @@ class LogsController < ApplicationController
   end
 
   def update
+    puts "IN UPDATE"
+    puts "###########################"
+    puts "###########################"
+    puts "###########################"
+    puts "###########################"
     if @log.update log_attrs
       redirect_to log_path(@log)
 
@@ -43,6 +55,10 @@ class LogsController < ApplicationController
     end
 
     redirect_to logs_path
+  end
+
+  def create_custom_location_and_country
+    @log = Log.new
   end
 
 private

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :logs
+  resources :logs do
+    collection do
+      get 'create_custom_location_and_country'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
